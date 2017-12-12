@@ -41,6 +41,7 @@ namespace Dominio.Entidades
 
             AddNotifications(new Contract()
                 .IsNullOrEmpty(Nome, "Nome", "Nome inválido"));
+
         }
 
         public void AlterarEmail(Email email)
