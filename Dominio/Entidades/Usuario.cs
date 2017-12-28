@@ -9,7 +9,7 @@ namespace Dominio.Entidades
 {
     public class Usuario:Entidade
     {
-        public Usuario(string nome, Email email, string senha)
+        public Usuario(Nome  nome, Email email, string senha)
         {
             Nome = nome;
             Email = email;
@@ -18,7 +18,7 @@ namespace Dominio.Entidades
             Validar();
         }
 
-        public string Nome { get; private set; }
+        public Nome Nome { get; private set; }
         public Email Email { get; private set; }
         public string Senha { get; private set; }
         public DateTime DataCadastro { get; private set; }
@@ -28,21 +28,12 @@ namespace Dominio.Entidades
         protected override void Validar()
         {
             AddNotifications(Email);
+            AddNotifications(Nome);
             AddNotifications(new Contract()
-                .IsNullOrEmpty(Nome, "Nome", "O nome é obrigatório")
                 .IsNullOrEmpty(Senha, "Senha", "A senha é obrigatória"));
         }
 
         #region Métodos
-
-        public void AlterarNome(string nome)
-        {
-            Nome = nome;
-
-            AddNotifications(new Contract()
-                .IsNullOrEmpty(Nome, "Nome", "Nome inválido"));
-
-        }
 
         public void AlterarEmail(Email email)
         {
@@ -66,6 +57,11 @@ namespace Dominio.Entidades
             AddNotifications(item);
 
             _Items.Add(item);
+        }
+
+        public string GerarCodigoParaTrocaDeSenha()
+        {
+            return Guid.NewGuid().ToString().Substring(0, 5).Replace('-', ' ');
         }
 
         #endregion

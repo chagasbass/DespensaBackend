@@ -1,0 +1,9 @@
+FLUXO DE CRIAÇÃO DE USUÁRIO	
+
+1-Recebe um comando do tipo NovoUsuarioComando
+2-Verificar se comando está valido
+	->Se nao retornar msg de erro
+3-Verificar se usuario já existe
+	->Se nao retornar mensagem de erro
+4-Cadastrar novo user
+5-Retornar mensagem de sucesso

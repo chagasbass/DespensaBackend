@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comandos\IComando.cs" />
     <Compile Include="Entidades\Entidade.cs" />
     <Compile Include="ObjetosDeValor\ObjetoDeValor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

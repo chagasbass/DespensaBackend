@@ -1,0 +1,9 @@
+FLUXO DE LOGIN	
+
+1-Recebe um comando do tipo LoginComando
+2-Verificar se comando está valido
+	->Se nao retornar msg de erro
+3-Valida as informacoes de user e senha
+	->Se nao retornar mensagem de erro
+4-Retorna comando de retorno com alguns dados do user(nome,login)(RetornoLoginComando)
+5-Retornar mensagem de sucesso

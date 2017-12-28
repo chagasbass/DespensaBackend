@@ -98,18 +98,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comandos\Usuarios\AlterarSenhaComando.cs" />
+    <Compile Include="Comandos\Usuarios\AtualizarUsuarioComando.cs" />
+    <Compile Include="Comandos\Usuarios\EsqueciSenhaComando.cs" />
+    <Compile Include="Comandos\Usuarios\LoginComando.cs" />
+    <Compile Include="Comandos\Usuarios\NovoUsuarioComando.cs" />
     <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\Codigo.cs" />
     <Compile Include="Entidades\Item.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Enums\EStatusItem.cs" />
     <Compile Include="ObjetosDeValor\Email.cs" />
+    <Compile Include="ObjetosDeValor\Nome.cs" />
     <Compile Include="ObjetosDeValor\Unidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\IUsuarioRepositorio.cs" />
+    <Compile Include="Servicos\IUsuarioServico.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Comandos\" />
+    <Folder Include="Comandos\Categorias\" />
+    <Folder Include="Comandos\Items\" />
     <Folder Include="Handlers\" />
-    <Folder Include="Repositorios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
