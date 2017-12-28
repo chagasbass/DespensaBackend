@@ -1,5 +1,5 @@
 ﻿using Flunt.Notifications;
-using System;
+using MongoDB.Bson;
 
 namespace Despensa.Compartilhados.Entidades
 {
@@ -7,12 +7,11 @@ namespace Despensa.Compartilhados.Entidades
     {
         public Entidade()
         {
-            Id = Guid.NewGuid();
+           
         }
 
-        public Guid  Id { get; private set; }
+        public ObjectId  Id { get; private set; }
 
         protected abstract void Validar();
-
     }
 }

@@ -14,7 +14,7 @@ namespace Dominio.Entidades
             Nome = nome;
             Email = email;
             Senha = senha;
-
+            
             Validar();
         }
 
